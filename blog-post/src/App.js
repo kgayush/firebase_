@@ -24,9 +24,13 @@ function App() {
   return (
     <Router>
       <nav>
-        <Link to={"/signup"}>Signup</Link>
+        
+        
         { !isAuth ? (
-          <Link to={"/login"}>Login</Link> 
+          <>
+            <Link to={"/signup"}>Signup</Link>
+            <Link to={"/login"}>Login</Link> 
+          </>
         ) : ( 
           <>
             <Link to={"/createblog"}>Create Blog</Link>
