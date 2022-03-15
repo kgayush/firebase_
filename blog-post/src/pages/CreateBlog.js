@@ -4,7 +4,6 @@ import { useNavigate } from 'react-router-dom';
 import { auth, db } from '../firebase-config';
 
 
-
 export default function CreateBlog({ isAuth }) {
 const [title, setTitle] = useState("");
 const [postText, setPostText] = useState("");

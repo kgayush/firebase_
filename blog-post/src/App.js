@@ -13,6 +13,7 @@ import { auth } from './firebase-config';
 function App() {
   const [isAuth, setIsAuth] = useState(localStorage.getItem("isAuth"));
 
+
   const signUserOut = () => {
     signOut(auth).then(() => {
       localStorage.clear();
@@ -23,8 +24,7 @@ function App() {
 
   return (
     <Router>
-      <nav>
-        
+      <nav>      
         
         { !isAuth ? (
           <>
@@ -34,7 +34,9 @@ function App() {
         ) : ( 
           <>
             <Link to={"/createblog"}>Create Blog</Link>
-            <button onClick={signUserOut}>Logout</button>
+            <Link to={"/"}>All Blogs</Link>
+            {/* <Link to={"/"}>My Blogs</Link> */}
+            <Link to={"/login"} onClick={signUserOut}>Logout</Link>
           </>
         )}
       </nav>

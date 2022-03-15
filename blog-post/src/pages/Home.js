@@ -44,10 +44,8 @@ export default function Home({ isAuth }) {
                         <button className='deletePost' onClick={() => {deletePost(post.id)}}>
                             Delete
                         </button>
-
                     )}
-                </h5>
-                
+                </h5>                
             </div>
         })}
     </div>
